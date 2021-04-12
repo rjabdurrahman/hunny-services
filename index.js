@@ -1,20 +1,17 @@
 const express = require('express');
+const path = require('path');
+const exphbs = require('express-handlebars');
 const app = express();
-const { connectDB, executeQuery } = require('./config/db');
-const apnaSchoolApi = require('./MicroServices/ApnaSchool/apnaSchool');
+
 app.use(express.urlencoded({ extended: false }));
-connectDB();
-app.set('trust proxy', 1);
-app.use('/api/apna_school', apnaSchoolApi);
-app.get('/', async (req, res) => {
-    let sql = `INSERT INTO Master_Staff_Notification (School_Id, Category_Id, Sent_By, Notice_Heading, Notice_Content, Send_Date) VALUES (1,
-    31,
-    1, N'অনলাইনে Google ইনপুট সরঞ্জামগুলি ব্যবহার করে দেখুন', N'Contects',
-    1311441);`
-    let output = await executeQuery(sql);
-    console.log(output)
-    res.send('Wroking...');
-});
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
+app.get('/', (req, res) => {
+    res.render('home');
+})
 
-const server = app.listen(process.env.PORT || 3000, () => console.log(`Listening on port ${server.address().port}`));
+const server = app.listen(process.env.PORT || 3000, () => console.log(`Listening on http://localhost:${server.address().port}`));
