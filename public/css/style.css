@@ -25,6 +25,10 @@ header {
           box-shadow: -2px 10px 36px -6px #b5b5b5;
 }
 
+header .logo {
+  height: 80px;
+}
+
 header .logo img {
   height: 80px;
   width: 80px;
