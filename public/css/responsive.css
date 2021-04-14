@@ -1,0 +1,16 @@
+@media only screen and (max-width: 420px) {
+  header {
+    padding: 0;
+  }
+  header .logo {
+    height: 50px;
+  }
+  header .logo img {
+    height: 50px;
+    width: auto;
+  }
+  header nav {
+    display: none;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
