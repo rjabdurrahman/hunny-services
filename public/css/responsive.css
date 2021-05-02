@@ -40,5 +40,9 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  footer .link-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */

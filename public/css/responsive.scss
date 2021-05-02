@@ -33,4 +33,10 @@
             justify-content: center;
         }
     }
+
+    footer {
+        .link-container {
+            grid-template-columns: 1fr;
+        }
+    }
 }
