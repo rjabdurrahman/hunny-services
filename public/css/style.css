@@ -9,16 +9,16 @@ a {
 }
 
 header {
-  padding: 0 100px;
+  padding: 0 clamp(20px, 7vw, 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-shadow: -2px 10px 36px -6px #b5b5b5;
@@ -45,11 +45,12 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 25px;
+  gap: clamp(18px, 3vw, 25px);
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li {
-  padding-bottom: 10px;
   position: relative;
 }
 
@@ -59,7 +60,7 @@ header nav ul li::after {
   position: absolute;
   width: 100%;
   border-bottom: 4px solid transparent;
-  bottom: 0;
+  bottom: -8px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform .3s;
@@ -72,5 +73,18 @@ header nav ul li:hover::after {
   border-color: red;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header .hamburger {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  display: none;
+  margin-right: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

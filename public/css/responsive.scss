@@ -1,15 +1,36 @@
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 670px) {
     header {
         padding: 0;
         .logo {
-            height: 50px;
+            height: 60px;
             img {
-                height: 50px;
+                height: 60px;
                 width: auto;
             }
         }
         nav {
             display: none;
+            ul {
+                padding: 24px 20px;
+            }
+        }
+        input[type="checkbox"] {
+            &:checked + nav {
+                display: block;
+                position: absolute;
+                background-color: #0170c1;
+                color: white;
+                right: 0; 
+                top: 60px;
+                ul {
+                    flex-direction: column;
+                }
+            }
+        }
+        .hamburger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
