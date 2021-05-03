@@ -17,7 +17,9 @@ header {
     box-sizing: border-box;
     box-shadow: -2px 10px 36px -6px rgba(181,181,181,1);
     background-color: transparent;
-
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
     .logo {
         height: 80px;
         img {
@@ -27,9 +29,6 @@ header {
     }
 
     nav {
-        font-size: 18px;
-        font-family: 'Montserrat', sans-serif !important;
-        text-transform: uppercase;
         ul {
             list-style-type: none;
             display: flex;
@@ -63,6 +62,19 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    .buttons {
+        button {
+            font-family: inherit;
+            font-size: inherit;
+            background-color: $primary-color;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 24px;
+            outline: none;
+            border: none;
         }
     }
 
