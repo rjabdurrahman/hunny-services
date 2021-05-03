@@ -9,9 +9,23 @@ a {
     text-decoration: none;
 }
 
-button {
+button, input {
     outline: none;
+}
+
+button {
+    font-family: "Roboto", sans-serif;
     border: none;
+    outline: none;
+    background-color: none;
+}
+
+.button {
+    padding: clamp(12px, 3vw, 20px) clamp(35px, 6vw, 50px);
+    font-size: 18px;
+    background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+    color: white;
+    cursor: pointer;
 }
 
 header {
@@ -136,13 +150,34 @@ header {
     }
 }
 
-.hero-section {
-    height: 100vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    background: url('../img/blurry-gradient.png');
-    background-size: cover;
+// .hero-section {
+//     height: 100vh; 
+//     display: flex; 
+//     align-items: center; 
+//     justify-content: center;
+//     background: url('../img/blurry-gradient.png');
+//     background-size: cover;
+// }
+
+.hero {
+    margin: clamp(100px, 6vw, 150px) 0 380px 100px;
+    .title {
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: 500;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 55px);
+        &:nth-of-type(2) {
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            margin-bottom: clamp(30px, 3vw, 65px);
+        }
+    }
 }
 
 
