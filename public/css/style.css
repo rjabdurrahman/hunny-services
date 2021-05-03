@@ -78,6 +78,7 @@ header nav ul li:hover::after {
 
 header nav ul li.active {
   font-weight: 500;
+  color: #0170c1;
 }
 
 header nav ul li.active::after {

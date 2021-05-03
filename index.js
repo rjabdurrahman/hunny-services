@@ -14,6 +14,22 @@ app.get('/', (req, res) => {
     res.render('home', { active: { home: true } });
 })
 
+app.get('/videos', (req, res) => {
+    res.render('pages/videos', { active: { videos: true } });
+})
+
+app.get('/courses', (req, res) => {
+    res.render('pages/courses', { active: { courses: true } });
+})
+
+app.get('/team', (req, res) => {
+    res.render('pages/team', { active: { team: true } });
+})
+
+app.get('/contact', (req, res) => {
+    res.render('pages/contact', { active: { contact: true } });
+})
+
 app.get('/admin', (req, res) => {
     res.render('pages/admin');
 })
