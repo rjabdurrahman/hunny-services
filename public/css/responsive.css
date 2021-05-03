@@ -19,6 +19,8 @@
     display: block;
   }
   header .main-nav .menu {
+    display: none;
+    padding: 24px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -40,7 +42,6 @@
     right: 28px;
   }
   header .main-nav .menu nav ul {
-    padding: 24px 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -51,8 +52,25 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
+  header .main-nav .menu nav ul li.active {
+    font-weight: 500;
+    color: white;
+  }
+  header .main-nav .menu nav ul li.active::after {
+    border-color: white;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  header .main-nav .menu .buttons {
+    margin-top: 20px;
+  }
+  header .main-nav .menu .buttons button {
+    background-color: #00b6a2;
+  }
   header .main-nav input[type="checkbox"]:checked + .menu {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   header .main-nav .hamburger {
     display: -webkit-inline-box;
