@@ -92,6 +92,9 @@
         &.services {
             ul {
                 grid-template-columns: auto;
+                li {
+                    width: 90vw;
+                }
             }
         }
     }

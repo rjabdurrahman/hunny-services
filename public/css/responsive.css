@@ -94,5 +94,8 @@
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
+  .section.services ul li {
+    width: 90vw;
+  }
 }
 /*# sourceMappingURL=responsive.css.map */
