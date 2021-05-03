@@ -12,6 +12,14 @@
             display: none;
             ul {
                 padding: 24px 20px;
+                li {
+                    &:hover {
+                        &::after {
+                            border-color: #FFFFFF;
+                            transform: scaleX(1);
+                        }
+                    }
+                }
             }
         }
         input[type="checkbox"] {

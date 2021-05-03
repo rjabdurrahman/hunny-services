@@ -15,6 +15,11 @@
   header nav ul {
     padding: 24px 20px;
   }
+  header nav ul li:hover::after {
+    border-color: #FFFFFF;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
   header input[type="checkbox"]:checked + nav {
     display: block;
     position: absolute;

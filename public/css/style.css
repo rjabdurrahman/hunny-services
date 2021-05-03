@@ -36,8 +36,8 @@ header .logo img {
 }
 
 header nav {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif !important;
   text-transform: uppercase;
 }
 
@@ -71,7 +71,7 @@ header nav ul li::after {
 }
 
 header nav ul li:hover::after {
-  border-color: red;
+  border-color: #0170c1;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
@@ -107,21 +107,6 @@ header .hamburger {
 footer {
   background-color: #e4e4e4;
   padding: 0 clamp(20px, 7vw, 100px);
-}
-
-footer .logo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: clamp(20px, 10vw, 100px);
-}
-
-footer .logo-container img {
-  height: clamp(30px, 10vw, 50px);
-  width: auto;
 }
 
 footer .link-container {
