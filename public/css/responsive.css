@@ -20,6 +20,16 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
+  header nav::before {
+    content: "";
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #0170c1;
+    position: absolute;
+    top: -24px;
+    right: 28px;
+  }
   header input[type="checkbox"]:checked + nav {
     display: block;
     position: absolute;
