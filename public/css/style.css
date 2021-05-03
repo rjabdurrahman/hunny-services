@@ -13,6 +13,28 @@ button {
   border: none;
 }
 
+header .top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0170c1;
+  color: white;
+  padding: 8px 100px;
+}
+
+header .top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
 header .main-nav {
   padding: 0 clamp(20px, 7vw, 100px);
   display: -webkit-box;
