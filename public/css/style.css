@@ -71,6 +71,16 @@ header nav ul li::after {
 }
 
 header nav ul li:hover::after {
+  border-color: #00b6a2;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+header nav ul li.active {
+  font-weight: 500;
+}
+
+header nav ul li.active::after {
   border-color: #0170c1;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
