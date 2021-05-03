@@ -216,7 +216,17 @@ header .main-nav .menu .buttons button {
 }
 
 .section {
-  padding: 50px clamp(20px, 7vw, 100px);
+  padding: 20px clamp(20px, 7vw, 100px) clamp(10px, 3vw, 50px);
+}
+
+.section h2 {
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: bold;
 }
 
 .section.services ul {
@@ -243,10 +253,20 @@ header .main-nav .menu .buttons button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: lightblue;
+  background-color: #00b8a2;
+  color: white;
   height: 300px;
   width: 450px;
   position: relative;
+  -webkit-box-shadow: 9px 13px 11px -10px rgba(0, 0, 0, 0.42);
+          box-shadow: 9px 13px 11px -10px rgba(0, 0, 0, 0.42);
+}
+
+.section.services ul li h3 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  font-weight: normal;
 }
 
 .section.services ul li::before {

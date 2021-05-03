@@ -173,8 +173,16 @@ header {
 }
 
 .section {
-    padding: 50px clamp(20px, 7vw, 100px);
+    padding: 20px clamp(20px, 7vw, 100px) clamp(10px, 3vw, 50px);
+    h2 {
+        margin: 15px 0;
+        text-transform: uppercase;
+    }
 
+    h2 {
+        font-size: clamp(18px, 3vw, 30px);;
+        font-weight: bold;
+    }
     &.services {
         ul {
             list-style-type: none;
@@ -188,10 +196,19 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: lightblue;
+                background-color: rgba(0, 184, 162, 1);
+                color: white;
                 height: 300px;
                 width: 450px;
                 position: relative;
+                box-shadow: 9px 13px 11px -10px rgba(0,0,0,0.42);
+                h3 {
+                    // text-transform: uppercase;
+                    margin: 0;
+                    font-size: 32px;
+                    text-align: center;
+                    font-weight: normal;
+                }
                 &::before {
                     position: absolute;
                     content: "";
