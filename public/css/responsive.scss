@@ -11,21 +11,20 @@
                     height: 60px;
                     width: auto;
                 }
-            }
-            nav {
-                display: none;
-                ul {
-                    padding: 24px 20px;
-                    li {
-                        &:hover {
-                            &::after {
-                                border-color: #FFFFFF;
-                                transform: scaleX(1);
-                            }
-                        }
-                    }
+                &.ls {
+                    display: none;
                 }
-    
+                &.ss {
+                    display: block;
+                }
+            }
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                background-color: #0170c1;
+                color: white;
+                right: 0; 
+                top: 60px;
                 &::before {
                     content: "";
                     border-width: 12px;
@@ -36,18 +35,24 @@
                     top: -24px;
                     right: 28px;
                 }
+                nav {
+                    ul {
+                        padding: 24px 20px;
+                        flex-direction: column;
+                        li {
+                            &:hover {
+                                &::after {
+                                    border-color: #FFFFFF;
+                                    transform: scaleX(1);
+                                }
+                            }
+                        }
+                    }
+                }
             }
             input[type="checkbox"] {
-                &:checked + nav {
+                &:checked + .menu {
                     display: block;
-                    position: absolute;
-                    background-color: #0170c1;
-                    color: white;
-                    right: 0; 
-                    top: 60px;
-                    ul {
-                        flex-direction: column;
-                    }
                 }
             }
             .hamburger {
