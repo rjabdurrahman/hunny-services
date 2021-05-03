@@ -88,4 +88,11 @@
         grid-template-columns: 1fr;
   }
 }
+
+@media screen and (max-width: 360px) {
+  .section.services ul {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
 /*# sourceMappingURL=responsive.css.map */

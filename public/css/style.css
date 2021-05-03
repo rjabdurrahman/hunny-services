@@ -215,6 +215,35 @@ header .main-nav .menu .buttons button {
   margin-bottom: clamp(30px, 3vw, 65px);
 }
 
+.section.services ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.section.services ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightblue;
+  height: 300px;
+  width: 450px;
+}
+
 footer {
   background-color: #e4e4e4;
   padding: 0 clamp(20px, 7vw, 100px);

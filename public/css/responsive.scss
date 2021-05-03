@@ -86,3 +86,13 @@
         }
     }
 }
+
+@media screen and (max-width: 360px){
+    .section {
+        &.services {
+            ul {
+                grid-template-columns: auto;
+            }
+        }
+    }
+}

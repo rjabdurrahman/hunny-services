@@ -172,5 +172,27 @@ header {
     }
 }
 
+.section {
+    &.services {
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            justify-content: center;
+            gap: 20px;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: lightblue;
+                height: 300px;
+                width: 450px;
+            }
+        }
+    }
+}
+
 
 @import 'footer';
