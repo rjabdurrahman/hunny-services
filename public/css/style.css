@@ -22,7 +22,7 @@ header .top-nav {
           justify-content: space-between;
   background-color: #0170c1;
   color: white;
-  padding: 8px 100px;
+  padding: 10px clamp(20px, 7vw, 100px);
 }
 
 header .top-nav ul {
@@ -32,7 +32,33 @@ header .top-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  font-size: 16px;
+}
+
+header .top-nav ul.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22px;
+  margin-left: 4px;
+}
+
+header .top-nav ul.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  font-size: 15px;
+}
+
+header .top-nav ul.right li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .main-nav {

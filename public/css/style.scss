@@ -20,13 +20,30 @@ header {
         justify-content: space-between;
         background-color: $primary-color;
         color: white;
-        padding: 8px 100px;
+        padding: 10px clamp(20px, 7vw, 100px);
         ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
             display: flex;
-            gap: 10px;
+            font-size: 16px;
+            
+            &.social {
+                display: flex;
+                gap: 22px;
+                margin-left: 4px;
+            }
+
+            &.right {
+                display: flex;
+                gap: 12px;
+                font-size: 15px;
+                li {
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                }
+            }
         }
     }
     .main-nav {
