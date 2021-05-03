@@ -192,7 +192,7 @@ header .main-nav .menu .buttons button {
 }
 
 .hero {
-  padding: 40px clamp(20px, 7vw, 100px) 55px;
+  padding: 40px clamp(20px, 7vw, 100px) clamp(55px, 6vw, 105px);
 }
 
 .hero .title {
