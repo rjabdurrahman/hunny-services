@@ -8,7 +8,12 @@ a {
   text-decoration: none;
 }
 
-header {
+button {
+  outline: none;
+  border: none;
+}
+
+header .main-nav {
   padding: 0 clamp(20px, 7vw, 100px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,16 +34,16 @@ header {
   text-transform: uppercase;
 }
 
-header .logo {
+header .main-nav .logo {
   height: 80px;
 }
 
-header .logo img {
+header .main-nav .logo img {
   height: 80px;
   width: 80px;
 }
 
-header nav ul {
+header .main-nav nav ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,11 +53,11 @@ header nav ul {
   padding: 0;
 }
 
-header nav ul li {
+header .main-nav nav ul li {
   position: relative;
 }
 
-header nav ul li::after {
+header .main-nav nav ul li::after {
   content: "";
   display: block;
   position: absolute;
@@ -67,39 +72,37 @@ header nav ul li::after {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-header nav ul li:hover::after {
+header .main-nav nav ul li:hover::after {
   border-color: #00b6a2;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-header nav ul li.active {
+header .main-nav nav ul li.active {
   font-weight: 500;
   color: #0170c1;
 }
 
-header nav ul li.active::after {
+header .main-nav nav ul li.active::after {
   border-color: #0170c1;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-header .buttons button {
+header .main-nav .buttons button {
   font-family: inherit;
   font-size: inherit;
   background-color: #0170c1;
   color: white;
   padding: 12px 18px;
   border-radius: 24px;
-  outline: none;
-  border: none;
 }
 
-header input[type="checkbox"] {
+header .main-nav input[type="checkbox"] {
   display: none;
 }
 
-header .hamburger {
+header .main-nav .hamburger {
   border: 1px solid black;
   border-radius: 4px;
   padding: 4px;

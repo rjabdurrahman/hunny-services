@@ -1,32 +1,34 @@
 <header>
-    <div class="logo">
-        <a href="/">
-            <img src="img/hunny coders.jpg" alt="HC">
-        </a>
-    </div>
-    <label for="mobile-menu" class="hamburger">
-        <span class="material-icons">menu</span>
-    </label>
-    <input type="checkbox" name="" id="mobile-menu">
-    <nav>
-        <ul>
-            <li class="{{#if active.home}}active{{/if}}">
-                <a href="/">HOME</a>
-            </li>
-            <li class="{{#if active.courses}}active{{/if}}">
-                <a href="/courses">COURSES</a>
-            </li>
-            <li class="{{#if active.videos}}active{{/if}}">
-                <a href="/videos">VIDEOS</a>
-            </li>
-            <li class="{{#if active.team}}active{{/if}}">
-                <a href="/team">OUR TEAM</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="buttons">
-        <button class="{{#if active.contact}}active{{/if}}">
-            <a href="/contact">CONTACT US</a>
-        </button>
+    <div class="main-nav">
+        <div class="logo">
+            <a href="/">
+                <img src="img/hunny coders.jpg" alt="HC">
+            </a>
+        </div>
+        <label for="mobile-menu" class="hamburger">
+            <span class="material-icons">menu</span>
+        </label>
+        <input type="checkbox" name="" id="mobile-menu">
+        <nav>
+            <ul>
+                <li class="{{#if active.home}}active{{/if}}">
+                    <a href="/">HOME</a>
+                </li>
+                <li class="{{#if active.courses}}active{{/if}}">
+                    <a href="/courses">COURSES</a>
+                </li>
+                <li class="{{#if active.videos}}active{{/if}}">
+                    <a href="/videos">VIDEOS</a>
+                </li>
+                <li class="{{#if active.team}}active{{/if}}">
+                    <a href="/team">OUR TEAM</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <button class="{{#if active.contact}}active{{/if}}">
+                <a href="/contact">CONTACT US</a>
+            </button>
+        </div>
     </div>
 </header>
