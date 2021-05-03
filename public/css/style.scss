@@ -23,7 +23,7 @@ button {
 .button {
     padding: clamp(12px, 3vw, 20px) clamp(35px, 6vw, 50px);
     font-size: 18px;
-    background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+    background: linear-gradient(90deg, $secondary-color 0%, $primary-color 100%);
     color: white;
     cursor: pointer;
 }
@@ -151,13 +151,14 @@ header {
 }
 
 .hero {
-    margin: clamp(100px, 6vw, 150px) 0 380px 100px;
+    padding: 40px clamp(20px, 7vw, 100px) 55px;
     .title {
         color: $primary-color;
         font-size: 20px;
         font-weight: 500;
         word-spacing: 5px;
         letter-spacing: 1px;
+        margin: clamp(10px, 4vw, 50px) 0;
     }
 
     h1 {

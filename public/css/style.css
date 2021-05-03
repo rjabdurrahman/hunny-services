@@ -22,8 +22,8 @@ button {
 .button {
   padding: clamp(12px, 3vw, 20px) clamp(35px, 6vw, 50px);
   font-size: 18px;
-  background: -webkit-gradient(linear, left top, right top, from(#0170c1), to(#00b6a2));
-  background: linear-gradient(90deg, #0170c1 0%, #00b6a2 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#00b6a2), to(#0170c1));
+  background: linear-gradient(90deg, #00b6a2 0%, #0170c1 100%);
   color: white;
   cursor: pointer;
 }
@@ -192,7 +192,7 @@ header .main-nav .menu .buttons button {
 }
 
 .hero {
-  margin: clamp(100px, 6vw, 150px) 0 380px 100px;
+  padding: 40px clamp(20px, 7vw, 100px) 55px;
 }
 
 .hero .title {
@@ -201,6 +201,7 @@ header .main-nav .menu .buttons button {
   font-weight: 500;
   word-spacing: 5px;
   letter-spacing: 1px;
+  margin: clamp(10px, 4vw, 50px) 0;
 }
 
 .hero h1 {
