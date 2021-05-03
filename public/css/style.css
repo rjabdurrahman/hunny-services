@@ -82,6 +82,19 @@ header .main-nav {
   text-transform: uppercase;
 }
 
+header .main-nav input[type="checkbox"] {
+  display: none;
+}
+
+header .main-nav .hamburger {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  display: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
 header .main-nav .logo {
   height: 80px;
 }
@@ -91,7 +104,24 @@ header .main-nav .logo img {
   width: 80px;
 }
 
-header .main-nav nav ul {
+header .main-nav .logo.ss {
+  display: none;
+}
+
+header .main-nav .menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .main-nav .menu nav ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,11 +131,11 @@ header .main-nav nav ul {
   padding: 0;
 }
 
-header .main-nav nav ul li {
+header .main-nav .menu nav ul li {
   position: relative;
 }
 
-header .main-nav nav ul li::after {
+header .main-nav .menu nav ul li::after {
   content: "";
   display: block;
   position: absolute;
@@ -120,43 +150,30 @@ header .main-nav nav ul li::after {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-header .main-nav nav ul li:hover::after {
+header .main-nav .menu nav ul li:hover::after {
   border-color: #00b6a2;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-header .main-nav nav ul li.active {
+header .main-nav .menu nav ul li.active {
   font-weight: 500;
   color: #0170c1;
 }
 
-header .main-nav nav ul li.active::after {
+header .main-nav .menu nav ul li.active::after {
   border-color: #0170c1;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-header .main-nav .buttons button {
+header .main-nav .menu .buttons button {
   font-family: inherit;
   font-size: inherit;
   background-color: #0170c1;
   color: white;
   padding: 12px 18px;
   border-radius: 24px;
-}
-
-header .main-nav input[type="checkbox"] {
-  display: none;
-}
-
-header .main-nav .hamburger {
-  border: 1px solid black;
-  border-radius: 4px;
-  padding: 4px;
-  display: none;
-  margin-right: 20px;
-  cursor: pointer;
 }
 
 .hero-section {

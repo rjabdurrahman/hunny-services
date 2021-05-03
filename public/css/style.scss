@@ -57,61 +57,6 @@ header {
         font-size: 16px;
         font-family: 'Montserrat', sans-serif !important;
         text-transform: uppercase;
-        .logo {
-            height: 80px;
-            img {
-                height: 80px;
-                width: 80px;
-            }
-        }
-    
-        nav {
-            ul {
-                list-style-type: none;
-                display: flex;
-                gap: clamp(18px, 3vw, 25px);
-                margin: 0;
-                padding: 0;
-                li {
-                    position: relative;
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        border-bottom: 4px solid transparent;
-                        bottom: -8px;
-                        transform: scaleX(0);
-                        transition: transform .3s;
-                    }
-                    &:hover {
-                        &::after {
-                            border-color: $secondary-color;
-                            transform: scaleX(1);
-                        }
-                    }
-                    &.active {
-                        font-weight: 500;
-                        color: $primary-color;
-                        &::after {
-                            border-color: $primary-color;
-                            transform: scaleX(1);
-                        }
-                    }
-                }
-            }
-        }
-    
-        .buttons {
-            button {
-                font-family: inherit;
-                font-size: inherit;
-                background-color: $primary-color;
-                color: white;
-                padding: 12px 18px;
-                border-radius: 24px;
-            }
-        }
     
         input[type="checkbox"] {
             display: none;
@@ -124,6 +69,69 @@ header {
             display: none;
             margin-right: 20px;
             cursor: pointer;
+        }
+        .logo {
+            height: 80px;
+            img {
+                height: 80px;
+                width: 80px;
+            }
+            &.ss {
+                display: none;
+            }
+        }
+        .menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            nav {
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    gap: clamp(18px, 3vw, 25px);
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        position: relative;
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 100%;
+                            border-bottom: 4px solid transparent;
+                            bottom: -8px;
+                            transform: scaleX(0);
+                            transition: transform .3s;
+                        }
+                        &:hover {
+                            &::after {
+                                border-color: $secondary-color;
+                                transform: scaleX(1);
+                            }
+                        }
+                        &.active {
+                            font-weight: 500;
+                            color: $primary-color;
+                            &::after {
+                                border-color: $primary-color;
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .buttons {
+                button {
+                    font-family: inherit;
+                    font-size: inherit;
+                    background-color: $primary-color;
+                    color: white;
+                    padding: 12px 18px;
+                    border-radius: 24px;
+                }
+            }
         }
     }
 }
