@@ -286,8 +286,9 @@ header .main-nav .menu .buttons button {
 }
 
 .section.services ul li h3 {
+  font-family: 'Raleway', sans-serif;
   margin: 0;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   font-weight: normal;
   display: block;
