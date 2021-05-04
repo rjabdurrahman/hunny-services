@@ -180,34 +180,44 @@ header {
     }
 
     h2 {
-        font-size: clamp(18px, 3vw, 30px);;
-        font-weight: bold;
+        font-size: clamp(22px, 3vw, 34px);;
+        font-weight: 400;
+        text-align: center;
     }
     &.services {
+        background-color: $primary-color;
+        color: white;
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: grid;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: repeat(4, auto);
             justify-content: center;
             gap: 20px;
             li {
+                position: relative;
                 display: flex;
+                flex-direction: column;
+                gap: 20px;
                 align-items: center;
                 justify-content: center;
-                background-color: rgba(0, 184, 162, 1);
                 color: white;
-                height: 300px;
-                width: 450px;
-                position: relative;
-                box-shadow: 9px 13px 11px -10px rgba(0,0,0,0.42);
+                height: 130px;
+                width: 250px;
+                padding: clamp(10px, 2vw, 20px);
+                // box-shadow: 9px 13px 11px -10px rgba(0,0,0,0.42);
+                .service-icon {
+                    font-size: 40px;
+                    color: $secondary-color;
+                }
                 h3 {
                     // text-transform: uppercase;
                     margin: 0;
-                    font-size: 32px;
+                    font-size: 22px;
                     text-align: center;
                     font-weight: normal;
+                    display: block;
                 }
                 &::before {
                     position: absolute;
@@ -215,8 +225,8 @@ header {
                     width: 0;
                     height: 0;
                     display: block;
-                    border-top: 0 solid $primary-color;
-                    border-right: 0 solid $primary-color;
+                    border-top: 0 solid $secondary-color;
+                    border-right: 0 solid $secondary-color;
                     top: -1.5px;
                     right: -1.5px;
                     transition: width linear 0.5s, height linear 0.5s;
@@ -227,8 +237,8 @@ header {
                     width: 0;
                     height: 0;
                     display: block;
-                    border-left: 0 solid $primary-color;
-                    border-bottom: 0 solid $primary-color;
+                    border-left: 0 solid $secondary-color;
+                    border-bottom: 0 solid $secondary-color;
                     bottom: -1.5px;
                     left: -1.5px;
                     // background-color: $secondary-color;
