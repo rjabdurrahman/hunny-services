@@ -192,10 +192,19 @@ header .main-nav .menu .buttons button {
 }
 
 .hero {
-  padding: 40px clamp(20px, 7vw, 100px) clamp(55px, 6vw, 105px);
+  background: url("../img/bu-bg.jpg");
+  background-size: cover;
+  height: 700px;
 }
 
-.hero .title {
+.hero .inner {
+  padding: 40px clamp(20px, 7vw, 100px) clamp(55px, 6vw, 105px);
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  color: white;
+}
+
+.hero .inner .title {
   color: #0170c1;
   font-size: 20px;
   font-weight: 500;
@@ -204,12 +213,12 @@ header .main-nav .menu .buttons button {
   margin: clamp(10px, 4vw, 50px) 0;
 }
 
-.hero h1 {
+.hero .inner h1 {
   margin: 0;
   font-size: clamp(30px, 5vw, 55px);
 }
 
-.hero h1:nth-of-type(2) {
+.hero .inner h1:nth-of-type(2) {
   font-weight: 400;
   letter-spacing: 1.5px;
   margin-bottom: clamp(30px, 3vw, 65px);
