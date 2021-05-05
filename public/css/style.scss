@@ -153,7 +153,7 @@ header {
 .hero {
     background: url('../img/bu-bg.jpg') ;
     background-size: cover;
-    height: clamp(350px, 60vh, 700px);
+    height: clamp(350px, 65vh, 700px);
     .inner {
         padding: 40px clamp(20px, 7vw, 100px) clamp(55px, 6vw, 105px);
         background-color: rgba(0, 0, 0, 0.3);
@@ -203,8 +203,9 @@ header {
             margin: 0;
             padding: 0;
             display: grid;
-            grid-template-columns: repeat(4, auto);
-            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            justify-items: center;
+            margin: auto;
             gap: 20px;
             li {
                 position: relative;

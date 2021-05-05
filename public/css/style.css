@@ -194,7 +194,7 @@ header .main-nav .menu .buttons button {
 .hero {
   background: url("../img/bu-bg.jpg");
   background-size: cover;
-  height: clamp(350px, 60vh, 700px);
+  height: clamp(350px, 65vh, 700px);
 }
 
 .hero .inner {
@@ -254,11 +254,10 @@ header .main-nav .menu .buttons button {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  margin: auto;
   gap: 20px;
 }
 
