@@ -227,21 +227,14 @@ header .main-nav .menu .buttons button {
 .page-title, .area-title {
   font-family: 'Exo 2', sans-serif;
   text-transform: uppercase;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 400;
+  text-align: center;
+  margin: 15px 0;
 }
 
 .section {
   padding: 20px clamp(20px, 7vw, 100px) clamp(10px, 3vw, 50px);
-}
-
-.section h2 {
-  margin: 15px 0;
-  text-transform: uppercase;
-}
-
-.section h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 400;
-  text-align: center;
 }
 
 .section.services {
