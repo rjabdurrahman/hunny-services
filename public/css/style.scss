@@ -9,6 +9,12 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 button, input {
     outline: none;
 }
@@ -36,9 +42,6 @@ header {
         color: white;
         padding: 10px clamp(20px, 7vw, 100px);
         ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
             display: flex;
             font-size: 16px;
             
@@ -101,11 +104,8 @@ header {
             align-items: center;
             nav {
                 ul {
-                    list-style-type: none;
                     display: flex;
                     gap: clamp(18px, 3vw, 25px);
-                    margin: 0;
-                    padding: 0;
                     li {
                         position: relative;
                         &::after {
@@ -195,9 +195,6 @@ header {
         background-color: $primary-color;
         color: white;
         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             justify-items: center;

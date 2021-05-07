@@ -8,6 +8,12 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 button, input {
   outline: none;
 }
@@ -41,9 +47,6 @@ header .top-nav {
 }
 
 header .top-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,13 +140,10 @@ header .main-nav .menu {
 }
 
 header .main-nav .menu nav ul {
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: clamp(18px, 3vw, 25px);
-  margin: 0;
-  padding: 0;
 }
 
 header .main-nav .menu nav ul li {
@@ -243,9 +243,6 @@ header .main-nav .menu .buttons button {
 }
 
 .section.services ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
