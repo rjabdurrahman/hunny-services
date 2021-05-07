@@ -279,9 +279,18 @@ header {
 
     &.why {
         ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            justify-content: center;
+            gap: 10px 30px;
             li {
                 font-size: 22px;
                 margin-bottom: 10px;
+                display: flex;
+                gap: 10px;
+                i {
+                    color: $primary-color;
+                }
             }
         }
     }

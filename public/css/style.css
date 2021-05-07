@@ -334,9 +334,28 @@ header .main-nav .menu .buttons button {
           animation-fill-mode: forwards;
 }
 
+.section.why ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px 30px;
+}
+
 .section.why ul li {
   font-size: 22px;
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.section.why ul li i {
+  color: #0170c1;
 }
 
 footer {
