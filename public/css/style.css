@@ -341,6 +341,12 @@ header .main-nav .menu .buttons button {
   margin-bottom: 30px;
 }
 
+.section.why ul {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .section.why ul li {
   font-size: 22px;
   margin-bottom: 10px;
@@ -348,11 +354,32 @@ header .main-nav .menu .buttons button {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  position: relative;
 }
 
 .section.why ul li i {
   color: grey;
   font-size: 30px;
+}
+
+.section.why ul li span::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  background-color: rgba(1, 112, 193, 0.2);
+  border-radius: 0 20px 20px 0;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.section.why ul li:hover i {
+  color: #0170c1;
+}
+
+.section.why ul li:hover span::before {
+  width: 100%;
 }
 
 footer {

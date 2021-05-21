@@ -285,6 +285,7 @@ header {
             margin-bottom: 30px;
         }
         ul {
+            width: max-content;
             li {
                 font-size: 22px;
                 margin-bottom: 10px;
@@ -293,6 +294,25 @@ header {
                 i {
                     color: grey;
                     font-size: 30px;
+                }
+                position: relative;
+                span::before {
+                    content: "";
+                    display: inline-block;
+                    height: 100%;
+                    width: 0;
+                    position: absolute;
+                    background-color: rgba(1, 112, 193, 0.2);
+                    border-radius: 0 20px 20px 0;
+                    transition: width 1s;
+                }
+                &:hover {
+                    i {
+                        color: $primary-color;
+                    }
+                    span::before {
+                        width: 100%;
+                    }
                 }
             }
         }
