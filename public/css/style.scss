@@ -35,6 +35,10 @@ button {
     cursor: pointer;
 }
 
+.flex {
+    display: flex;
+}
+
 header {
     .top-nav {
         display: flex;
@@ -319,7 +323,7 @@ header {
     }
 }
 
-@import "footer";
+@import "footer", "profile";
 
 @keyframes borderanimation {
     0% {

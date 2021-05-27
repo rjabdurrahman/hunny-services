@@ -1,0 +1,27 @@
+.profile {
+    max-width: 800px;
+    margin: 40px auto;
+    .left {
+        img.main {
+            max-height: 300px;
+            width: auto;
+            margin-right: 30px;
+        }
+        ul.social {
+            margin-top: 10px;
+            display: flex;
+            gap: 33px;
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+    .right {
+        button {
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+    }
+}

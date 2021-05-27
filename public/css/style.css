@@ -35,6 +35,12 @@ button {
   cursor: pointer;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 header .top-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,6 +436,36 @@ footer .coryright-area {
   text-align: center;
   font-weight: 500;
   font-size: clamp(14px, 1vw, 18px);
+}
+
+.profile {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.profile .left img.main {
+  max-height: 300px;
+  width: auto;
+  margin-right: 30px;
+}
+
+.profile .left ul.social {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+}
+
+.profile .left ul.social img {
+  height: 50px;
+  width: 50px;
+}
+
+.profile .right button {
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 @-webkit-keyframes borderanimation {
