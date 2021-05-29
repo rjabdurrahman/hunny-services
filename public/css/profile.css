@@ -22,9 +22,48 @@
   width: 50px;
 }
 
-.profile .right button {
+.profile .right .title-tag {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.profile .right .button {
   padding: 12px 25px;
   border-radius: 10px;
   font-size: 18px;
+}
+
+.profile .right .skills h4 {
+  margin: 12px 0;
+}
+
+.profile .right .skills ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profile .right .skills ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgray;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.profile .right .skills ul li::before {
+  font-family: "Material Icons";
+  content: "\e876";
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+  color: #0170c1;
 }
 /*# sourceMappingURL=profile.css.map */

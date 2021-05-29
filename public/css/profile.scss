@@ -1,3 +1,4 @@
+@import 'constants';
 .profile {
     max-width: 800px;
     margin: 40px auto;
@@ -18,10 +19,39 @@
         }
     }
     .right {
-        button {
+        .title-tag {
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .button {
             padding: 12px 25px;
             border-radius: 10px;
             font-size: 18px;
+        }
+        .skills {
+            h4 {
+                margin: 12px 0;
+            }
+            ul {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                li {
+                    display: inline-flex;
+                    align-items: center;
+                    background-color: lightgray;
+                    padding: 4px 8px;
+                    border-radius: 8px;
+                    &::before {
+                        font-family: "Material Icons";
+                        content: "\e876";
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-right: 5px;
+                        color: $primary-color;
+                    }
+                }
+            }
         }
     }
 }
