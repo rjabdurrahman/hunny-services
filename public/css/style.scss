@@ -289,11 +289,11 @@ header {
             margin-bottom: 30px;
         }
         ul {
-            width: max-content;
+            word-break: break-all;
             li {
                 font-size: 22px;
                 margin-bottom: 10px;
-                display: flex;
+                display: inline-flex;
                 gap: 10px;
                 i {
                     color: grey;
