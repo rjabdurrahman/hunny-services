@@ -348,7 +348,7 @@ header .main-nav .menu .buttons button {
 }
 
 .section.why ul {
-  word-break: break-all;
+  word-break: normal;
 }
 
 .section.why ul li {
