@@ -354,9 +354,9 @@ header .main-nav .menu .buttons button {
 .section.why ul li {
   font-size: 22px;
   margin-bottom: 10px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
   position: relative;
 }
