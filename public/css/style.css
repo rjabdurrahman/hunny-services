@@ -382,8 +382,8 @@ header .main-nav .menu .buttons button {
   color: #0170c1;
 }
 
-.section.why ul li:hover span::before {
-  width: 100%;
+.section.why ul li:hover span {
+  color: #0170c1;
 }
 
 footer {

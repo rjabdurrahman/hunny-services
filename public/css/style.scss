@@ -314,9 +314,12 @@ header {
                     i {
                         color: $primary-color;
                     }
-                    span::before {
-                        width: 100%;
+                    span {
+                        color: $primary-color;
                     }
+                    // span::before {
+                    //     width: 100%;
+                    // }
                 }
             }
         }
