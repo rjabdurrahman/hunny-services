@@ -34,6 +34,10 @@ app.get('/admin', (req, res) => {
     res.render('pages/admin');
 })
 
+app.get('/best-programmer-in-bangladesh', (req, res) => {
+    res.render('pages/best_programmer_in_bangladesh');
+})
+
 app.get('/*', (req, res) => {
     res.render('pages/404');
 })
