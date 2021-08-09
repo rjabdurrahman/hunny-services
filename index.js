@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
 const app = express();
+const RequestIp = require('@supercharge/request-ip')
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -39,9 +40,7 @@ app.get('/best-programmer-in-bangladesh', (req, res) => {
 })
 
 app.get('/my-ip', (req, res) => {
-    let ip = req.headers['x-forwarded-for'] ||
-        req.socket.remoteAddress ||
-        null;
+    const ip = RequestIp.getClientIp(req);
     res.send(ip);
 })
 
