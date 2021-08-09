@@ -38,6 +38,13 @@ app.get('/best-programmer-in-bangladesh', (req, res) => {
     res.render('pages/best_programmer_in_bangladesh');
 })
 
+app.get('/my-ip', (req, res) => {
+    let ip = req.headers['x-forwarded-for'] ||
+        req.socket.remoteAddress ||
+        null;
+    res.send(ip);
+})
+
 app.get('/*', (req, res) => {
     res.render('pages/404');
 })
