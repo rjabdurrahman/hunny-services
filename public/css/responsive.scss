@@ -1,59 +1,71 @@
 @import 'constants';
+
 @media only screen and (max-width: 670px) {
     header {
         .top-nav {
             display: none;
         }
+
         .main-nav {
             padding: 0;
+
             .logo {
                 height: 60px;
+
                 img {
                     height: 60px;
-                    width: auto;
+                    width : auto;
                 }
+
                 &.ls {
                     display: none;
                 }
+
                 &.ss {
                     display: block;
                 }
             }
+
             .menu {
-                display: none;
-                padding: 24px 0 50px;
-                flex-direction: column;
-                position: absolute;
+                display         : none;
+                padding         : 24px 0 50px;
+                flex-direction  : column;
+                position        : absolute;
                 background-color: #0170c1;
-                color: white;
-                right: 0; 
-                top: 60px;
+                color           : white;
+                right           : 0;
+                top             : 60px;
+
                 &::before {
-                    content: "";
-                    border-width: 12px;
-                    border-style: solid;
-                    border-color: transparent;
+                    content            : "";
+                    border-width       : 12px;
+                    border-style       : solid;
+                    border-color       : transparent;
                     border-bottom-color: #0170c1;
-                    position: absolute;
-                    top: -24px;
-                    right: 28px;
+                    position           : absolute;
+                    top                : -24px;
+                    right              : 28px;
                 }
+
                 nav {
                     ul {
                         flex-direction: column;
+
                         li {
                             &:hover {
                                 &::after {
                                     border-color: #FFFFFF;
-                                    transform: scaleX(1);
+                                    transform   : scaleX(1);
                                 }
                             }
+
                             &.active {
                                 font-weight: 500;
-                                color: white;
+                                color      : white;
+
                                 &::after {
                                     border-color: white;
-                                    transform: scaleX(1);
+                                    transform   : scaleX(1);
                                 }
                             }
                         }
@@ -62,21 +74,34 @@
 
                 .buttons {
                     margin-top: 20px;
+
                     button {
                         background-color: $secondary-color;
                     }
                 }
             }
+
             input[type="checkbox"] {
-                &:checked + .menu {
+                &:checked+.menu {
                     display: flex;
                 }
             }
+
             .hamburger {
-                display: inline-flex;
-                align-items: center;
+                display        : inline-flex;
+                align-items    : center;
                 justify-content: center;
             }
+        }
+    }
+
+    .profile {
+        flex-direction: column;
+        padding       : 0 20px;
+
+        .button {
+            padding  : 12px 8px !important;
+            font-size: 16px !important;
         }
     }
 
