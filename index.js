@@ -13,14 +13,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
-let browser;
-let page;
+let browser, page, page1;
 async function openBrowser() {
     browser = await puppeteer.launch({
         headless: true,
         args: ['--no-sandbox']
       });
     page = await browser.newPage();
+    page1 = await browser.newPage();
 }
 openBrowser();
 
@@ -31,6 +31,11 @@ app.get('/burn/:address', async(req, res) => {
                 width: 1900,
                 height: 1000,
             });
+            await page.goto(`https://bscscan.com/token/${req.params.address}`);
+            await page.waitForSelector('span.hash-tag.text-truncate')
+            let totalSupply = await page.evaluate(() => {
+                return document.querySelector('span.hash-tag.text-truncate').textContent;
+            });
             await page.goto(`https://bscscan.com/token/generic-tokenholders2?m=normal&a=${req.params.address}&s=1000000000000000000000000&sid=75ac412a2a3ca185d31dd6a17773b96f&p=1`);
             await page.waitForSelector('[data-toggle="tooltip"]')
             const innerHTML = await page.evaluate(() => {
@@ -38,6 +43,7 @@ app.get('/burn/:address', async(req, res) => {
                 else return Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address').parentElement.nextElementSibling.textContent;
             });
             res.status(200).send({
+                totalSupply: Number(totalSupply.replace(/,/g, '')),
                 balance: Number(innerHTML.replace(/,/g, ''))
             });
         } catch (err) {
