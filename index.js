@@ -4,7 +4,9 @@ const exphbs = require('express-handlebars');
 const app = express();
 const RequestIp = require('@supercharge/request-ip')
 const puppeteer = require('puppeteer');
+const cors = require('cors');
 
+app.use(cors({origin: '*'}));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
