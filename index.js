@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/burn/:address', async(req, res) => {
-    if(!address == 'undefined') {
+    if(!(address == 'undefined')) {
         const browser = await puppeteer.launch({
             headless: true,
             args: ['--no-sandbox']
