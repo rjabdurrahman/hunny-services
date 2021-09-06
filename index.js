@@ -13,7 +13,10 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/burn/:address', async(req, res) => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox']
+      });
     const page = await browser.newPage();
     try {
         await page.setViewport({
