@@ -12,7 +12,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
-app.get('burn/:address', async(req, res) => {
+app.get('/burn/:address', async(req, res) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     try {
