@@ -37,7 +37,6 @@ app.get('/burn/:address', async(req, res) => {
                 if(Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address') == undefined) return '000';
                 else return Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address').parentElement.nextElementSibling.textContent;
             });
-            await browser.close();
             res.status(200).send({
                 balance: Number(innerHTML.replace(/,/g, ''))
             });
