@@ -39,8 +39,10 @@ app.get('/burn/:address', async(req, res) => {
             await page.goto(`https://bscscan.com/token/generic-tokenholders2?m=normal&a=${req.params.address}&s=1000000000000000000000000&sid=75ac412a2a3ca185d31dd6a17773b96f&p=1`);
             await page.waitForSelector('[data-toggle="tooltip"]')
             const innerHTML = await page.evaluate(() => {
-                if(Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address') == undefined) return '000';
-                else return Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address').parentElement.nextElementSibling.textContent;
+                if(Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address')) return Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address').parentElement.nextElementSibling.textContent;
+                else if(Array.from(document.querySelectorAll('a')).find(x => x.textContent=='0x0000000000000000000000000000000000000001')) return Array.from(document.querySelectorAll('a')).find(x => x.textContent=='0x0000000000000000000000000000000000000001').parentElement.parentElement.nextElementSibling.textContent;
+                else if(Array.from(document.querySelectorAll('a')).find(x => x.textContent=='0x000000000000000000000000000000000000dead')) return Array.from(document.querySelectorAll('a')).find(x => x.textContent=='0x000000000000000000000000000000000000dead').parentElement.parentElement.nextElementSibling.textContent;
+                else return '000';
             });
             res.status(200).send({
                 totalSupply: Number(totalSupply.replace(/,/g, '')),
