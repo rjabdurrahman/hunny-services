@@ -3,6 +3,8 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const app = express();
 const RequestIp = require('@supercharge/request-ip')
+const puppeteer = require('puppeteer');
+const { get } = require('http');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -44,8 +46,32 @@ app.get('/my-ip', (req, res) => {
     res.send(ip);
 })
 
+const browser = await puppeteer.launch();
+const page = await browser.newPage();
+app.get('burn/:address', (req, res) => {
+    try {
+        await page.setViewport({
+            width: 1900,
+            height: 1000,
+        });
+        await page.goto(`https://bscscan.com/token/generic-tokenholders2?m=normal&a=${req.params.address}&s=1000000000000000000000000&sid=75ac412a2a3ca185d31dd6a17773b96f&p=1`);
+        await page.waitForSelector('[data-toggle="tooltip"]')
+        const innerHTML = await page.evaluate(() => {
+            if(Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address') == undefined) return '000';
+            else return Array.from(document.querySelectorAll('[data-toggle="tooltip"]')).find(x => x.textContent=='Burn Address').parentElement.nextElementSibling.textContent;
+        });
+        await browser.close();
+        res.status(200).send({
+            balance: Number(innerHTML.replace(/,/g, ''))
+        });
+    } catch (err) {
+        console.log("Could not create a browser instance => : ", err);
+    }
+})
+
 app.get('/*', (req, res) => {
     res.render('pages/404');
 })
+
 
 const server = app.listen(process.env.PORT || 3000, () => console.log(`Listening on http://localhost:${server.address().port}`));
