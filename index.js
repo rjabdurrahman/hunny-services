@@ -13,14 +13,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
+let browser;
+let page;
+async function openBrowser() {
+    browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox']
+      });
+    page = await browser.newPage();
+}
+openBrowser();
 
 app.get('/burn/:address', async(req, res) => {
-    if(!(address == 'undefined')) {
-        const browser = await puppeteer.launch({
-            headless: true,
-            args: ['--no-sandbox']
-          });
-        const page = await browser.newPage();
+    if(!(req.params.address == 'undefined') || req.params.address.substr(0,2) == '0x') {
         try {
             await page.setViewport({
                 width: 1900,
@@ -41,7 +46,7 @@ app.get('/burn/:address', async(req, res) => {
         }
     }
     else {
-        res.send({
+        res.json({
             balance: 0
         });
     }
